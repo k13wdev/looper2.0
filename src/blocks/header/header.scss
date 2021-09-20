@@ -1,0 +1,102 @@
+.page-header {
+  padding-block-start: min(5vh, 3.5rem);
+  padding-block-end: min(10vh, 7rem);
+  background: 
+              url("../img/header-bg.jpg"),
+              linear-gradient(90deg, hsl(var(--clr-secondary-100)) 0%, hsla(0, 0%, 77%, 0) 56.77%),
+              hsl(var(--clr-secondary-100));
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+  
+  & > ._container {
+    padding-right: 0;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr) 2rem;
+    grid-template-rows: 5fr 12fr 6fr;
+    column-gap: 2rem;
+  }
+
+  &__logo {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    align-self: center;
+
+    font-size: calc(18px + 9 * ((100vw - 320px) / 1440));
+    font-weight: 900;
+    line-height: 175%;
+    text-decoration: none;
+    color: hsl(var(--clr-white));
+
+    @media (max-width: 768px) {
+      grid-column: 1/7;
+    }
+  }
+  
+  &__main-navigation {
+    grid-column: 3/14;
+    grid-row: 1/2;
+    align-self: center;
+
+    @media (max-width: 768px) {
+      grid-column: 7/14;
+    }
+  }
+
+  &__headline {
+    grid-column: 1/12;
+    grid-row: 2/3;
+
+    padding-block: 4rem;
+    margin: 0;
+    font-size: calc(27px + 72 * ((100vw - 320px) / 1440));
+    font-weight: 900;
+    color: hsl(var(--clr-white));
+
+    &--small {
+      margin-block-end: 1rem;
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    &--accent {
+      display: block;
+      color: hsl(var(--clr-primary));
+    }
+  }
+
+  &__subheader {
+    grid-column: 1/9;
+    grid-row: 3/4;
+
+    font-size: calc(14.4px + 3.6 * ((100vw - 320px) / 1440));
+    color: hsl(var(--clr-white));
+    margin: 0;
+
+    @media (max-width: 575.98px) {
+      grid-column: 1/12;
+    }
+  }
+
+  &__scroll {
+    grid-column: 13/14;
+    grid-row: 2/3;
+    justify-self: center;
+    
+    padding-inline-start: 3.5rem;
+
+    writing-mode: vertical-lr;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: hsl(var(--clr-white));
+  }
+
+  &__scroll-icon {
+    margin-inline-start: 1.5rem;
+  }
+}

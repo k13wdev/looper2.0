@@ -1,0 +1,41 @@
+{
+  "name": "barbershop",
+  "version": "1.0.0",
+  "description": "Сайт Cat Energy",
+  "main": "",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KBogomolov"
+  },
+  "keywords": [
+    "верстка",
+    "макет",
+    "сайта"
+  ],
+  "author": "Кирилл Богомолов",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-svgstore": "^8.0.0",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.3.6",
+    "postcss-sort-media-queries": "^3.11.12",
+    "posthtml-include": "^1.7.1",
+    "sass": "^1.37.5"
+  }
+}

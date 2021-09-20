@@ -1,0 +1,45 @@
+<section class="features">
+  <div class="features__wrapper _container">
+    <include src="src/blocks/title/title.html" locals='{
+      "classMix": "features__title",
+      "classMod": "title--white",
+      "title-accent": "Benefits",
+      "title": "Shaping the future"
+    }'></include>
+
+    <include src="src/blocks/subheader/subheader.html" locals='{
+      "classMix": "features__subheader",
+      "classMod": "subheader--clr-white",
+      "text": "Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut eu sem integer vitae. Libero nunc consequat interdum varius."
+    }'></include>
+
+    <div class="features__text-wrapper">
+      <p class="features__text">Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.</p>
+      <p class="features__text">Lectus vestibulum mattis ullamcorper velit sed ullamcorper.</p>
+      <p class="features__text">Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dui faucibus in
+        ornare quam viverra.</p>
+      <p class="features__text">MPosuere ac ut consequat semper viverra.</p>
+    </div>
+    <button class="button features__button">Learn more</button>
+
+    <h3 class="features__slider-header">Mobile Apps</h3>
+    <div class="features__slider-image">
+      <picture>
+        <img src="./img/features-photo.jpg" alt="">
+      </picture>
+    </div>
+    <p class="features__slider-control">
+      <span class="features__slider-value">1</span>/<span class="features__slider-total">3</span>
+      <button class="features__slider-control-button">
+        <svg width="27" height="27">
+          <use xlink:href="#icon-arrow"></use>
+        </svg>
+      </button>
+      <button class="features__slider-control-button">
+        <svg width="27" height="27">
+          <use xlink:href="#icon-arrow"></use>
+        </svg>
+      </button>
+    </p>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+.vscode
+.github
+*.log
+*.pdf
+*.psd
+ehthumbs.db
+Thumbs.db
+node_modules
+dist
+package-lock.json

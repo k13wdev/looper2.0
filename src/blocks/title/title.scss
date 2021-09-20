@@ -1,0 +1,29 @@
+.title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 148%;
+
+  &--clr-dark-300 {
+    color: hsl(var(--clr-dark-300));
+  }
+
+  &--clr-white {
+    color: hsl(var(--clr-white));
+  }
+
+  &--clr-secondary-400 {
+    color: hsl(var(--clr-secondary-400));
+  }
+}
+
+.title-accent {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 206%;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: hsl(var(--clr-primary));
+}

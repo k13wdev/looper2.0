@@ -1,0 +1,30 @@
+$mobile-width: 767;
+$tablet-width: 768;
+$desktop-width: 1200;
+
+:root {
+  --ff-primary: 'Mplus', 'Arial', sans-serif;
+  --ff-secondary: 'Noticia-text', serif;
+
+  --clr-primary: 337 93% 51%;
+
+  --clr-secondary-100: 269 64% 38%;
+  --clr-secondary-200: 269 93% 24%;
+  --clr-secondary-300: 270 63% 19%;
+  --clr-secondary-400: 262 85% 11%;
+
+  --clr-tetriary: 165 100% 47%;
+  --clr-tetriary-100: 151 77% 68%;
+
+  --clr-white: 0 0% 99%;
+  --clr-light-grey: 60 24% 94%;
+
+  --clr-dark-100: 268 8% 61%;
+  --clr-dark-200: 270 9% 47%;
+  --clr-dark-300: 270 27% 19%;
+
+  --clr-error: 349 100% 47%;
+  --clr-success: 140 93% 51%;
+  --clr-warning: 25 93% 51%;
+  --clr-info: 198 100% 47%;
+}

@@ -1,0 +1,99 @@
+.features {  
+  padding-top: 1rem;
+  color: hsl(var(--clr-white));
+  background: 
+  linear-gradient(to right, hsl(var(--clr-secondary-300)) 70%, transparent 70%, transparent 100%),
+              linear-gradient(to bottom, transparent 44rem, hsl(var(--clr-secondary-400)) 44rem, hsl(var(--clr-secondary-300)) 100%);
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(27, 18px);
+    grid-gap: 18px 30px;
+  }
+
+  &__title {
+    grid-column: 1/span 6;
+    grid-row: 4/span 4;
+    z-index: 100;
+  }
+  &__subheader {
+    grid-column: 1/span 5;
+    grid-row: 8/span 3;
+    max-width: 48ch;
+  }
+
+  &__text-wrapper {
+    grid-column: 1/span 5;
+    grid-row: 12/span 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 51ch;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 161%;
+  }
+
+  &__button {
+    grid-column: 1/span 3;
+    grid-row: 22/span 2;
+  }
+
+  &__slider-header {
+    grid-column: 12;
+    grid-row: 11/span 7;
+    justify-self: center;
+    margin: 0;
+    writing-mode: vertical-lr;
+    text-align: center;
+    color: hsl(var(--clr-secondary-100));
+  }
+
+  &__slider-image {
+    grid-column: 7/span 5;
+    grid-row: 6/span 17;
+    max-width: 460px;
+  }
+
+  &__slider-control {
+    grid-column: 10/span 2;
+    grid-row: 24/span 2;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 0.7rem;
+    font-weight: 800;
+    line-height: 206%;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+  }
+
+  &__slider-control-button {
+    padding: 0;
+    margin-left: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transform: rotate(-180deg);
+
+    svg {
+      fill: hsla(0, 0%, 77%, 0.05);
+    }
+  }
+  
+  &__slider-control-button:last-child {
+    margin-left: 1rem;
+    svg {
+      transform: rotate(180deg);
+    }
+  } 
+}

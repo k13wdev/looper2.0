@@ -1,0 +1,40 @@
+.cite {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(14, 1rem);
+    grid-gap: 1rem 30px;
+  }
+
+  &__container {
+    grid-column: 1/span 11;
+    grid-row: 3/span 10;
+    padding: 0;
+  }
+
+  &__text {
+
+    padding-block: 4rem;
+    padding-inline: 7rem;
+    width: 68ch;
+    font-family: var(--ff-secondary);
+    font-style: italic;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 177%;
+  }
+
+  &__author {
+
+  }
+
+  &__accent {
+
+  }
+
+  &__image-author {
+    grid-column: 8/span 5;
+    grid-row: 1/span 13;
+  }
+
+}

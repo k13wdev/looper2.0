@@ -1,0 +1,120 @@
+.services {
+  padding-block-start: 7rem;
+  padding-block-end: 7.5rem;
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-secondary-400));
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__subheader {
+    margin: 0;
+    margin-block-end: 3.5rem;
+    max-width: 47ch;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 160%;
+    text-align: center;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 3rem;
+    list-style: none;
+  }
+
+
+  &__item {
+    padding-block-start: 5rem;
+    display: flex;
+    flex-direction: column;
+    width: calc(33.333% - 30px);
+    min-height: 13.888rem;
+    height: auto;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 4rem 4rem;
+
+    &--webdesign {
+      background-image: url("../img/webdesig.svg");
+    }
+
+    &--webdev {
+      background-image: url("../img/webdev.svg");
+
+    }
+
+    &--marketing {
+      background-image: url("../img/marketing.svg");
+    }
+
+    &--webdesign-2 {
+      background-image: url("../img/webdesig-2.svg");
+    }
+
+    &--webdev-2 {
+      background-image: url("../img/webdev-2.svg");
+
+    }
+
+    &--marketing-2 {
+      background-image: url("../img/marketing-2.svg");
+    }
+
+    
+  }
+
+  &__item-header {
+    margin: 0;
+    margin-block-end: 1.5rem;
+    max-width: 39ch;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  .services__item--webdesign &__item-header {
+    color: hsl(var(--clr-tetriary));
+  }
+
+  .services__item--webdev &__item-header {
+    color: hsl(var(--clr-primary));
+  }
+
+  .services__item--marketing &__item-header {
+    color: hsl(var(--clr-warning));
+  }
+
+  .services__item--webdesign-2 &__item-header {
+    color: hsl(var(--clr-tetriary));
+  }
+
+  .services__item--webdev-2 &__item-header {
+    color: hsl(var(--clr-primary));
+  }
+
+  .services__item--marketing-2 &__item-header {
+    color: hsl(var(--clr-warning));
+  }
+
+  &__item-description {
+    margin: 0;
+    max-width: 39ch;
+    width: 100%;
+    font-size: 0.9rem;
+    line-height: 160%;
+  }
+
+  &__button {
+    margin-block-start: 4rem;
+  }
+}
