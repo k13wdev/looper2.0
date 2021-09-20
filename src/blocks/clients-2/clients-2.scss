@@ -43,25 +43,35 @@
     line-height: 160%;
     color: hsl(var(--clr-white));
   }
+  
+  &__our {
+    grid-column: 8/span 3;
+    grid-row: 10/span 1;
+    font-size: 0.7rem;
+    font-weight: 800;
+    line-height: 206%;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: hsl(var(--clr-dark-300));
+  }
 
   &__list {
-    grid-column: 7/span 6;
+    grid-column: 8/span 6;
     grid-row: 13;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     row-gap: 4rem;
-    width: 50%;
     list-style: none;
   }
 
   &__item {
-    width: 50%;
-
+    width: content;
+    text-align: center;
     svg {
-      fill: red;
-      background: red;
+      fill: hsl(var(--clr-primary));
     }
   }
 }
