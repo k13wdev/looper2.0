@@ -54,5 +54,10 @@
     right: -6.15rem;
     width: 411px;
     height: 1146px;
+    background: hsl(var(--clr-primary));
+
+    img {
+      mix-blend-mode: multiply;
+    }
   }
 }

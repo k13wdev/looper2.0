@@ -1,19 +1,20 @@
-const autoprefixer = require('autoprefixer');
-const browsersync = require('browser-sync').create();
-const del = require('del');
-const {dest, src, watch, series, parallel} = require('gulp');
-const csso = require('gulp-csso');
-const imagemin = require('gulp-imagemin');
-const plumber = require('gulp-plumber');
-const postcss = require('gulp-postcss');
-const posthtml = require('gulp-posthtml');
-const rename = require('gulp-rename');
-const sass = require('gulp-sass')(require('sass'));
-const svgstore = require('gulp-svgstore');
-const webp = require('gulp-webp');
-const sortmediaqueries = require('postcss-sort-media-queries');
-const include = require('posthtml-include');
-const concat = require('gulp-concat');
+const autoprefixer = require('autoprefixer')
+const browsersync = require('browser-sync').create()
+const del = require('del')
+const {dest, src, watch, series, parallel} = require('gulp')
+const csso = require('gulp-csso')
+const imagemin = require('gulp-imagemin')
+const plumber = require('gulp-plumber')
+const postcss = require('gulp-postcss')
+const posthtml = require('gulp-posthtml')
+const rename = require('gulp-rename')
+const sass = require('gulp-sass')(require('sass'))
+const svgstore = require('gulp-svgstore')
+const webp = require('gulp-webp')
+const sortmediaqueries = require('postcss-sort-media-queries')
+const include = require('posthtml-include')
+const concat = require('gulp-concat')
+const browserSync = require('browser-sync')
 
 function clean() {
     return del("./dist")
@@ -21,23 +22,23 @@ function clean() {
 
 function fonts() {
     return src("src/fonts/**/*.{woff,woff2}", {base: "src"})
-           .pipe(dest("./dist/"));
+           .pipe(dest("./dist/"))
 }
 
 function image() {
-    return src("src/img/**/[^icon]*.{png,jpg,svg}")
+    return src("src/img/[^icon-]*.{png,jpg,svg}", {base: "src"})
            .pipe(imagemin([
                 imagemin.mozjpeg({quality: 75, progressive: true}),
                 imagemin.optipng({optimizationLevel: 5}),
                 imagemin.svgo()
            ]))
-           .pipe(dest("./dist/img"));
+           .pipe(dest("./dist/"))
 }
 
 function wbp() {
-    return src("src/img/**/*.{png,jpg}")
+    return src("src/img/**/*.{png,jpg}", {base: "src"})
            .pipe(webp({quality: 90}))
-           .pipe(dest("./dist/img"));
+           .pipe(dest("./dist/"))
 }
 
 function svg() {
@@ -46,7 +47,7 @@ function svg() {
                inlineSvg: true
            }))
            .pipe(rename("sprite.svg"))
-           .pipe(dest("src/img"));
+           .pipe(dest("src/img"))
     
 }
 
@@ -56,7 +57,7 @@ function html() {
            .pipe(posthtml([
                include()
            ]))
-           .pipe(dest("./dist/"));
+           .pipe(dest("./dist/"))
 }
 
 function css() {
@@ -72,27 +73,27 @@ function css() {
            .pipe(dest("./dist/styles/"))
            .pipe(csso())
            .pipe(rename("style.min.css"))
-           .pipe(dest("./dist/styles/"));
+           .pipe(dest("./dist/styles/"))
 }
 
 function js() {
     return src(['src/js/**/*.js', 'src/blocks/**/*.js'])
     .pipe(concat('index.js'))
-    .pipe(dest('./dist/js/'));
+    .pipe(dest('./dist/js/'))
 }
 
 function server() {  
     browsersync.init({
-        server: "./dist/"
+        server: "dist"
     })
 }
 
 function wtch() {
-    watch(["src/blocks/**/*.scss", "src/styles/**/*.scss"], series(css)).on("change", browsersync.reload);
-    watch(["src/blocks/**/*.html", "src/views/**/*.html"], series(html)).on("change", browsersync.reload);
-    watch(["src/blocks/**/*.js", "src/js/**/*.js"], series(js)).on("change", browsersync.reload);
-    watch("src/fonts/**/*.{woff, woff2}", series(fonts)).on("change", browsersync.reload);
-    watch("src/img/**/*.{jpg, png, svg, webp}", parallel(image, wbp, svg)).on("change", browsersync.reload);
+    watch(["src/blocks/**/*.scss", "src/styles/**/*.scss"]).on("change", series(css, browsersync.reload))
+    watch(["src/blocks/**/*.html", "src/views/**/*.html"]).on("change", series(html, browsersync.reload))
+    watch(["src/blocks/**/*.js", "src/js/**/*.js"]).on("change", series(css, browsersync.reload))
+    watch("src/fonts/**/*.{woff, woff2}").on("change", series(fonts, browsersync.reload))
+    watch("src/img/**/*.{jpg, png, svg, webp}").on("change", series(image, wbp, svg, browsersync.reload))
 }
 
 exports.build = series(clean, image, wbp, svg, fonts, html, css, js)

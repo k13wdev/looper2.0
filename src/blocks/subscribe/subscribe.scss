@@ -1,6 +1,6 @@
 .subscribe {
-
-
+  padding-block-start: 7rem;
+  padding-block-end: 8rem;
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -8,32 +8,62 @@
   }
 
   &__header {
-    
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: hsl(var(--clr-dark-300));    
   }
 
   &__text {
-    
+    margin: 0;
+    margin-block-start: 1.25rem;
+    margin-block-end: 2.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: hsl(var(--clr-dark-300));   
   }
 
   &__form {
+    padding-block: 0.7rem;
+    padding-inline: 0.7rem;
+    display: flex;
+    max-width: 31rem;
     width: 50%;
-  }
-
-  &__border { 
     border-bottom: 0.15rem solid hsl(var(--clr-light-grey));
   }
 
   &__email {
+    width: 60%;
+    border: 0;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    color: hsl(var(--clr-dark-100));
+    background: transparent;
+  }
 
+  &__email::placeholder {
+    text-transform: uppercase;
   }
 
   &__button {
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40%;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: hsl(var(--clr-primary));
     border: 0;
+    background: transparent;
 
     svg {
+      margin-inline-start: 1.1rem;
       fill: transparent;
       stroke: hsl(var(--clr-primary));
     }

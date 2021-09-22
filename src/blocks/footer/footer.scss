@@ -1,0 +1,137 @@
+.page-footer {
+  padding-block: 7rem;
+  color: hsl(var(--clr-white));
+  background: hsl(var(--clr-secondary-400));
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: min-content 1fr 4rem;
+    grid-gap: 1rem 30px;
+  }
+
+  &__logo {
+    grid-column: 1/span 2;
+    grid-row: 1;
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 179%;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: hsl(var(--clr-white));
+  }
+
+  &__logo-text {
+    grid-column: 1/span 3;
+    grid-row: 2;
+    margin: 0;
+    max-width: 18ch;
+    width: 100%;
+    font-size: 16.2px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  &__header {
+    margin: 0;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12.6px;
+    line-height: 26px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--clr-primary));
+    text-underline-offset: 0.5rem;
+
+    &--menu {
+      grid-column: 4/span 1;
+      grid-row: 1;
+    }
+
+    &--services {
+      grid-column: 5/span 2;
+      grid-row: 1;
+    }
+
+    &--contact {
+      grid-column: 7/span 3;
+      grid-row: 1;
+    }
+
+    &--social {
+      grid-column: 10/span 3;
+      grid-row: 1;
+    }
+  }
+
+  &__menu {
+    grid-column: 4/span 1;
+    grid-row: 2;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &--services {
+      grid-column: 5/span 2;
+    }
+  }
+
+  &__menu-item {
+    a {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12.6px;
+      line-height: 28px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: hsl(var(--clr-white));
+    }
+  }
+
+  &__contacts {
+    grid-column: 7/span 3;
+    grid-row: 2;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__contacts-item {
+    a {
+      font-weight: normal;
+      font-size: 16.2px;
+      line-height: 26px;
+      text-decoration: none;
+      color: hsl(var(--clr-white));
+
+      svg {
+        margin-inline-end: 1.5rem;
+      }
+    }
+  }
+
+  &__social {
+    grid-column: 10/span 3;
+    grid-row: 2;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+  }
+
+  &__social-item:not(:last-child) {
+    margin-inline-end: 2.5rem;
+  }
+
+  &__copyright {
+    margin: 0;
+    grid-column: 4/span 5;
+    grid-row: 3;
+    align-self: flex-end;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11.7px;
+    line-height: 19px;
+  }
+}

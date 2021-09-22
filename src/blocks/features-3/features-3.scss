@@ -52,6 +52,13 @@
     &--small {
       grid-column: 7/span 4;
       grid-row: 14/span 9;
+      background: hsl(var(--clr-tetriary));
+      width: 362px;
+      height: 324px;
+
+      img {
+        mix-blend-mode: multiply;
+      }
     }
   }
  
