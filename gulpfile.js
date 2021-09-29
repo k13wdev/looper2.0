@@ -26,7 +26,7 @@ function fonts() {
 }
 
 function image() {
-    return src("src/img/[^icon-]*.{png,jpg,svg}", {base: "src"})
+    return src("src/img/*.{png,jpg,svg}", {base: "src"})
            .pipe(imagemin([
                 imagemin.mozjpeg({quality: 75, progressive: true}),
                 imagemin.optipng({optimizationLevel: 5}),
@@ -36,13 +36,13 @@ function image() {
 }
 
 function wbp() {
-    return src("src/img/**/*.{png,jpg}", {base: "src"})
+    return src("src/img/*.{png,jpg}", {base: "src"})
            .pipe(webp({quality: 90}))
            .pipe(dest("./dist/"))
 }
 
 function svg() {
-    return src("src/img/icon-*.svg")
+    return src("src/img/icon/*.svg")
            .pipe(svgstore({
                inlineSvg: true
            }))

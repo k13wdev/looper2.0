@@ -1,0 +1,37 @@
+.about-intro {
+  padding-block: 6rem;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__title {
+    width: 100%;
+  }
+  
+  &__subheader {
+    margin-block-end: 4rem;
+    max-width: 50ch;
+  }
+
+  &__card {
+    width: calc(50%);
+  }
+
+  &__header {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: hsl(var(--clr-dark-300));
+  }
+
+  &__text {
+    max-width: 42ch;
+    width: 100%;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    color: hsl(var(--clr-dark-200));
+  }
+}

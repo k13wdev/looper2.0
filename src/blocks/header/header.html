@@ -1,15 +1,23 @@
-<header class="page-header">
+<header class="page-header {{classMod}}">
   <div class="page-header__wrapper _container">
     <a href class="page-header__logo">Looper</a>
    
-    <include src="src/blocks/main-navigation/main-navigation.html"></include>
+    <include src="src/blocks/main-navigation/main-navigation.html" locals='{
+      "classMod": "page-header__main-navigation"
+    }'></include>
+
+    <h1 class="page-header__headline-secondary">
+      <span class="page-header__headline-secondary--accent">{{accentText}}</span>
+      {{headline}}
+    </h1>
+
 
     <p class="page-header__headline">
       <span class="page-header__headline--small">What we  do?</span>
       We grow <span class="page-header__headline--accent">great business</span>
     </p>
 
-    <p class="page-header__subheader">
+    <p  p class="page-header__subheader">
       Velit laoreet id donec ultrices. Ut lectus arcu bibendum varius.
     </p>
 

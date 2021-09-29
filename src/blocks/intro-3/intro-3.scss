@@ -1,10 +1,6 @@
 .intro-3 {
-  padding-block-start: 10rem;
-  padding-block-end: 6.5rem;
-              
-  &__wrapper {
-   
-  }
+  padding-block-start: min(12.5vw, 10rem);
+  padding-block-end: min(8.125vw, 6.5rem);
 
   &__list {
     padding: 0;
@@ -21,7 +17,7 @@
     padding-block-start: 5rem;
     display: flex;
     flex-direction: column;
-    width: calc(33.333% - 30px);
+    width: 100%;
     min-height: 13.888rem;
     height: auto;
     background-position: left top;
@@ -29,16 +25,24 @@
     background-size: 4rem 4rem;
 
     &--webdesign {
-      background-image: url("../img/webdesig.svg");
+      background-image: url("../img/react-2.svg");
     }
 
     &--webdev {
-      background-image: url("../img/webdev.svg")
+      background-image: url("../img/react-2.svg")
 
     }
 
     &--marketing {
-      background-image: url("../img/marketing.svg")
+      background-image: url("../img/react-2.svg")
+    }
+
+    @media (min-width: 768px) {
+      width: calc(50% - 30px);
+    }
+
+    @media (min-width: 1024px) {
+      width: calc(33.333% - 30px);
     }
   }
 

@@ -1,52 +1,93 @@
 .clients {
   position: relative;
-  padding-block: 8rem;
+  padding-block: min(10vw, 8rem);
   background: hsl(var(--clr-secondary-300));
   
   &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: url("../img/clients-bg.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    mix-blend-mode: multiply;
+    @media (min-width: 1024px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: url("../img/clients-bg-1.png");
+
+      @media (min-device-pixel-ratio: 2) {
+        background: url("../img/clients-bg-1@2x.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        mix-blend-mode: multiply;  
+      }
+
+      @supports (background: url('../img/clients-bg-1.webp')) {
+        background: url("../img/clients-bg-1.webp");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        mix-blend-mode: multiply;  
+
+        @media (min-device-pixel-ratio: 2) {
+          background: url("../img/clients-bg-1@2x.webp");
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          mix-blend-mode: multiply;  
+        }
+      }
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      mix-blend-mode: multiply;  
+    }
   }
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__header {
-    grid-column: 7/span 2;
-    margin-block-end: 4rem;
+    margin: 0;
+    margin-block-end: min(5vw, 4rem);
     font-size: 1rem;
     font-weight: 800;
     line-height: 205%;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     color: hsl(var(--clr-white));
+
+    @media (min-width: 1024px) {
+      grid-column: 2/3;
+    }
   }
 
   &__list {
-    grid-column: 7/span 5;
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    row-gap: 4rem;
+    row-gap: min(5vw, 4rem);
     width: 100%;
     list-style: none;
+
+    @media (min-width: 768px) {
+      width: 70%;
+    }
+
+    @media (min-width: 1024px) {
+      grid-column: 2/3;
+      width: 85%;
+    }
   }
 
   &__item {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: content;
 
     svg {
       fill: hsl(var(--clr-white));

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <include src="src/views/layouts/head.html" locals='{
+    "keywords": "looper",
+    "description": "Looper",
+    "title": "Looper team",
+    "stylesSrc": "../styles/style.css"
+  }'></include>
+<body class="page-body">
+  <div style="display: none">
+    <include src="src/img/sprite.svg"></include>
+  </div>
+
+  
+  <include src="src/blocks/header/header.html" locals='{
+    "classMod": "page-header--secondary",
+    "accentText": "Our team",
+    "headline": "We build great business"
+  }'></include>
+  
+  <main class="page-main">
+    <include src="src/blocks/testimonials/testimonials.html"></include>
+    <include src="src/blocks/subscribe/subscribe.html"></include>
+  </main>
+
+  <include src="src/blocks/footer/footer.html"></include>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

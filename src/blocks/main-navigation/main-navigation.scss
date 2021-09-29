@@ -1,17 +1,17 @@
 .main-navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;   
   align-items: center;
   color: hsl(var(--clr-white));
 
   &__site-list {
     padding: 0;
     margin: 0;
-    display: flex;
+    display: none;
     list-style: none;
 
-    @media (max-width: 991.98px) {
-      display: none;
+    @media (min-width: 1024px) {
+      display: flex;
     }
   }
 
@@ -23,21 +23,17 @@
     font-size: 0.8rem;
     font-weight: 800;
     text-decoration: none;
-    color: inherit;
+    color: currentColor;
   }
 
   &__contact-list {
     padding: 0;
     margin: 0;
-    display: flex;
+    display: none;
     list-style: none;
-    
-    @media (max-width: 768px) {
-      display: none;
-    }
 
-    @media (max-width: 991.98px) {
-      margin-inline-end: 5.5rem;
+    @media (min-width: 1024px) {
+      display: flex;
     }
   }
 
@@ -51,8 +47,8 @@
     font-size: 0.8rem;
     font-weight: 800;
     text-decoration: none;
-    color: inherit;
-  }
+    color: currentColor;
+}
 
   &__contact-icon {
     margin-right: 1rem;
@@ -62,9 +58,20 @@
     padding: 0;
     border: 0;
     background-color: transparent;
+    color: unset;
   }
 
-  @media (max-width: 991.98px) {
-    justify-content: flex-end;
+  svg {
+    fill: currentColor;
   }
+
+
+  @media (min-width: 1024px) {
+    justify-content: space-between;
+  }
+}
+
+
+.page-header--secondary  .main-navigation  {
+  color: hsl(var(--clr-secondary-300));
 }

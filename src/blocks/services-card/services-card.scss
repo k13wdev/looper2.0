@@ -1,0 +1,89 @@
+.services-card {
+  &__wrapper {
+    
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subheader {
+    text-align: center;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__list-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(17, 1rem);
+    row-gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__list-item:nth-child(odd) > :is(&__list-header, &__list-text) {
+    grid-column: 1;
+  }
+
+  &__list-item:nth-child(odd) > &__list-image {
+    grid-column: 2;
+    justify-self: end;
+    box-shadow: 5.5rem 6rem 0;
+  }
+
+  &__list-item:nth-child(even) > :is(&__list-header, &__list-text) {
+    grid-column: 2;
+  }
+
+  &__list-item:nth-child(even) > &__list-image {
+    grid-column: 1;
+    box-shadow: -5.5rem 6rem 0; 
+  }
+
+  &__list-item:nth-child(n) > &__list-image {
+    color: hsl(var(--clr-primary)); 
+  }
+
+  &__list-item:nth-child(3n-1) > &__list-image {
+    color: hsl(var(--clr-tetriary));
+  }
+
+  &__list-item:nth-child(3n) > &__list-image {
+    color: hsl(var(--clr-secondary-100));
+  }
+
+  &__list-header {
+    grid-row: 3/span 4;
+    max-width: 30ch;
+    width: 100%;
+
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 40px;
+  }
+
+  &__list-accent {
+    display: block;
+  }
+ 
+  &__list-text {
+    grid-row: 7/span 3;
+    max-width: 43ch;
+    width: 100%;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+  }
+
+  &__list-image {
+    grid-column: 2;
+    grid-row: 1/span 13;
+    width: 705px;
+    height: 468px;
+    background: tomato;
+  }
+}

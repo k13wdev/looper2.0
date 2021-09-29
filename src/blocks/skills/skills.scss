@@ -1,5 +1,5 @@
 .skills {
-  padding-block: 10rem;
+  padding-block: min(12.5vw, 10rem);
   background: hsl(var(--clr-secondary-300));
 
   &__header {
@@ -30,14 +30,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    row-gap: min(5vw, 4rem);
     list-style: none;
   }
 
   &__item {
-    padding-block: 4rem;
-    padding-inline: 2rem;
-    width: calc(33.333% - 30px);
-    border: 0.1rem solid hsl(var(--clr-white)/0.2)
+    padding-block: min(5vw, 4rem);
+    padding-inline: min(2.5vw, 2rem);
+    border: 0.1rem solid hsl(var(--clr-white)/0.2);
+
+    @media (min-width: 768px) {
+      width: calc(50% - 30px);
+    }
+
+    @media (min-width: 1024px) {
+      width: calc(33.333% - 30px);
+    }
   }
 
   &__item-header {
@@ -69,4 +77,11 @@
     color: hsl(var(--clr-white));
   }
 
+  &--about {
+    background: hsl(var(--clr-secondary-100));
+  }
+
+  &--about :is(&__item-accent) {
+    display: none;
+  }
 }

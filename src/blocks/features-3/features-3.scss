@@ -2,63 +2,101 @@
   
  
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(23, 18px);
-    grid-gap: 1rem 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, max-content);
+    }
   }
 
   &__title {
-    grid-column: 1/span 5;
-    grid-row: 4/span 3;
+    @media (min-width: 1024px) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
   }
 
   &__subheader {
-    grid-column: 1/span 5;
-    grid-row: 7/span 3;
     margin-block-start: 1rem;
+    margin-block-end: min(5vw ,4rem);
     max-width: 49ch;
+
+    @media (min-width: 1024px) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
   }
 
   &__text-wrapper {
-    grid-column: 1/span 5;
-    grid-row: 12/span 9;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    height: clamp(12rem, 20vw, 16rem);
+
+    @media (min-width: 1024px) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
   }
 
   &__text {
     margin: 0;
     max-width: 51ch;
     width: 100%;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.25vw, 1rem);
     font-weight: 400;
     line-height: 161%;
     color: hsl(var(--clr-secondary-400));
   }
 
   &__button {
-    grid-column: 1/span 3;
-    grid-row: 21/span 2;
+    margin-block-start: 2.5rem;
+
+    @media (min-width: 1024px) {
+      grid-column: 1/2;
+      grid-row: 4/5;
+    }
   }
 
   &__image {
+    
     &--big {
-      grid-column: 8/span 5;
-      grid-row: 4/span 15;
+      margin-block-start: 2rem;
+      margin-inline-start: auto;
+      max-width: 460px;
+      width: 90%;
+
+      @media (min-width: 1024px) {
+        margin-block-start: 0;
+        grid-row: 1/4;
+      }
     }
 
     &--small {
-      grid-column: 7/span 4;
-      grid-row: 14/span 9;
+      margin-block-start: -5rem;
+      max-width: 362px;
+      width: 75%;
       background: hsl(var(--clr-tetriary));
-      width: 362px;
-      height: 324px;
 
       img {
         mix-blend-mode: multiply;
       }
+
+      @media (min-width: 1024px) {
+        margin: 0;
+        position: absolute;
+        top: min(13.75vw, -11rem);
+        grid-row: 4;
+      }
+    }
+
+
+    @media (min-width: 1024px) {
+      grid-column: 2/3;
     }
   }
  

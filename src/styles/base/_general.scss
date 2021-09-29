@@ -41,8 +41,15 @@ img {
 }
 
 ._container {
-  max-width: 1140px;
   margin: 0 auto;
+  width: clamp(280px, 80%, 1140px);
+}
+
+
+._container-fluid {
+  margin: 0 auto;
+  padding-inline: 10%;
+  width: min(100%, 1440px);
 }
 
 .button {

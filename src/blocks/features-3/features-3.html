@@ -25,10 +25,18 @@
     <button class="button features-3__button">Learn more</button>
 
     <div class="features-3__image features-3__image--big">
-      <picture><img src="../img/features-photo-4.jpg" alt=""></picture>
+      <picture>
+        <source srcset="../img/features-photo-4@2x.webp 2x, ../img/features-photo-4.webp 1x" type="image/webp">
+        <source srcset="../img/features-photo-4@2x.jpg 2x, ../img/features-photo-4.jpg 1x" type="image/jpg"> 
+        <img src="../img/features-photo-4.jpg" srcset="../img/features-photo-4@2x.jpg 2x" alt="">
+      </picture>
     </div>
     <div class="features-3__image features-3__image--small">
-      <picture><img src="../img/features-photo-3.jpg" alt=""></picture>
+      <picture>
+        <source srcset="../img/features-photo-3@2x.webp 2x, ../img/features-photo-3.webp 1x" type="image/webp">
+        <source srcset="../img/features-photo-3@2x.jpg 2x, ../img/features-photo-3.jpg 1x" type="image/jpg"> 
+        <img src="../img/features-photo-3.jpg" srcset="../img/features-photo-3@2x.jpg 2x" alt="">
+      </picture>
     </div>
   </div>
 </section>

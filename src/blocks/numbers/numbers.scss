@@ -1,5 +1,5 @@
 .numbers {
-  padding-block: 10rem;
+  padding-block: min(12.5vw, 10rem);
   
   &__wrapper {
     display: flex;
@@ -15,16 +15,19 @@
   &__list {
     padding: 0;
     margin: 0;
-    margin-block-start: 6.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin-block-start: min(8.125vw ,6.5rem);
+   
     width: 100%;
     list-style: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   &__item {
-    width: calc(33.333% - 30px);
     font-weight: 800;
     font-size: 0.7rem;
     line-height: 206%;
@@ -33,6 +36,11 @@
     text-transform: uppercase;
     text-align: center;
     color: hsl(var(--clr-dark-300));
+
+
+    @media (min-width: 768px) {
+      width: calc(33.333% - 30px);
+    }
   }
 
   &__accent {
