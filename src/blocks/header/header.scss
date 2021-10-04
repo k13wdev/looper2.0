@@ -52,7 +52,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: dense;
-    
+
     @media (min-width: 1024px) {
       grid-template-columns: 3fr 9fr;
     }
@@ -112,7 +112,7 @@
     grid-column: 2/3;
     grid-row: 2/3;
     justify-self: end;
-    
+
     display: none;
     padding-inline-start: 3.5rem;
     writing-mode: vertical-lr;
@@ -120,7 +120,7 @@
     font-weight: 800;
     text-decoration: none;
     color: currentColor;
-    
+
     @media (min-width: 768px) {
       display: block;
     }
@@ -137,9 +137,41 @@
     background:
       linear-gradient(to bottom, white 8rem, transparent 8rem, transparent 100%),
       linear-gradient(to bottom, transparent 8rem, hsl(var(--clr-secondary-100)) 8rem, hsl(var(--clr-secondary-100)) 100%),
-      url("../img/header-bg.jpg");
+      url("../img/header-bg-2.jpg");
 
-    background-blend-mode: normal, multiply;
+    @media (min-device-pixel-ratio: 2) {
+      background:
+        linear-gradient(to bottom, white 8rem, transparent 8rem, transparent 100%),
+        linear-gradient(to bottom, transparent 8rem, hsl(var(--clr-secondary-100)) 8rem, hsl(var(--clr-secondary-100)) 100%),
+        url("../img/header-bg-2@2x.jpg");
+
+      background-blend-mode: normal, multiply;
+      background-position: center center;
+    }
+
+    @supports (background: url('../img/header-bg-2.webp')) {
+      background:
+        linear-gradient(to bottom, white 8rem, transparent 8rem, transparent 100%),
+        linear-gradient(to bottom, transparent 8rem, hsl(var(--clr-secondary-100)) 8rem, hsl(var(--clr-secondary-100)) 100%),
+        url("../img/header-bg-2.webp");
+
+
+      background-blend-mode: normal, multiply;
+      background-position: center center;
+
+      @media (min-device-pixel-ratio: 2) {
+        background:
+          linear-gradient(to bottom, white 8rem, transparent 8rem, transparent 100%),
+          linear-gradient(to bottom, transparent 8rem, hsl(var(--clr-secondary-100)) 8rem, hsl(var(--clr-secondary-100)) 100%),
+          url("../img/header-bg-2@2x.webp");
+
+        background-blend-mode: normal, multiply;
+        background-position: center center;
+      }
+    }
+
+    background-blend-mode: normal,
+    multiply;
     background-position: center center;
   }
 

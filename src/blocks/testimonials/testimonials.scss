@@ -1,28 +1,36 @@
 .testimonials {
-  padding-block-end: 7.5rem;
+  padding-block: min(9.375vw, 7.5rem);
   background: url("../img/testimonials-bg.png");
   background-repeat: no-repeat;
   background-position: center 5rem;
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(19, 1rem);
-    grid-gap: 1rem 30px;
-    justify-content: center;
+    @media (min-width: 1366px) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(19, 1rem);
+      grid-gap: 1rem 30px;
+      justify-content: center;
+    }
   }
 
   &__item {
-    grid-column: 3/span 8;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: 1366px) {
+      grid-column: 3/span 8;
+    }
   }
 
   &__image {
-    transform: translateY(-4rem);
-    width: 460px;
+    max-width: 460px;
     clip-path: circle(50% at 50%);
+  
+    @media (min-width: 1366px) {
+      transform: translateY(-4rem);
+    }
   }
 
   &__qoute {
@@ -36,7 +44,7 @@
     margin-block-end: 2rem;
     width: 35ch;
     font-family: var(--ff-secondary);
-    font-size: 2rem;
+    font-size: clamp(0.9rem, 2.5vw, 2rem);
     font-style: italic;
     font-weight: 400;
     line-height: 177%;
@@ -46,7 +54,7 @@
   &__author {
     font-family: var(--ff-primary);
     font-style: normal;
-    font-size: 1rem;
+    font-size: clamp(0.7rem, 1.25vw, 1rem);
     font-weight: 400;
     line-height: 160%;
     color: hsl(var(--clr-dark-300));
@@ -58,28 +66,43 @@
   }
 
   &__control {
-    grid-row: 17/span 2;
-    padding: 0;
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0;
-    background: transparent;
+    display: none;
 
     svg {
-      fill: transparent;
-      stroke: hsl(var(--clr-primary));
+      fill: hsl(var(--clr-primary));
+    }
+
+    @media (min-width: 1366px) {
+      grid-row: 17/span 2;
+      padding: 0;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0;
+      background: transparent;
+      border: 0.1rem solid hsl(var(--clr-primary));
+      border-radius: 50%;
     }
   }
 
   &__prev {
-    grid-column: 1/span 1;
     transform: rotate(-180deg);
+  
+    @media (min-width: 1366px) {
+      grid-column: 1/span 1;
+    }
   }
 
   &__next {
-    grid-column: 12/ span 1;
+    @media (min-width: 1366px) {
+      grid-column: 12/ span 1;
+    }
+  }
+
+  @media (min-width: 1366px) {
+    padding: 0;
+    padding-block-end: min(9.375vw, 7.5rem);
   }
 }

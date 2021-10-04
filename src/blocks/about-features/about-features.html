@@ -1,5 +1,5 @@
 <section class="about-features">
-  <div class="about-features__wrapper _container">
+  <div class="about-features__wrapper _container-fluid">
     <include src="src/blocks/title/title.html" locals='{
       "classMix": "about-features__title",
       "classMod": "",
@@ -10,11 +10,11 @@
     <table class="about-features__table">
       <tr class="about-features__table-row">
         <td class="about-features__table-fields">We build great business</td>
-        <td class="about-features">Id consectetur purus ut faucibus pulvinar elementum integer enim. A arcu cursus vitae congue mauris rhoncus aenean.</td>
+        <td class="about-features__table-value">Id consectetur purus ut faucibus pulvinar elementum integer enim. A arcu cursus vitae congue mauris rhoncus aenean.</td>
       </tr>
       <tr class="about-features__table-row">
         <td class="about-features__table-fields">We build great business</td>
-        <td class="about-features">Enim neque volutpat ac tincidunt vitae. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus vel. Odio morbi quis commodo odio aenean sed adipiscing diam donec. Nisi vitae suscipit tellus mauris a.</td>
+        <td class="about-features__table-value">Enim neque volutpat ac tincidunt vitae. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus vel. Odio morbi quis commodo odio aenean sed adipiscing diam donec. Nisi vitae suscipit tellus mauris a.</td>
       </tr>
       <tr class="about-features__table-row">
         <td class="about-features__table-fields">We build great business</td>
@@ -22,7 +22,11 @@
       </tr>
     </table>
     <div class="about-features__image">
-      <picture><img src="../img/intro-photo.jpg" alt=""></picture>
+      <picture>
+        <source srcset="../img/intro-photo-1@2x.webp 2x, ../img/intro-photo-1.webp 1x" type="image/webp">
+        <source srcset="../img/intro-photo-1@2x.jpg 2x, ../img/intro-photo-1.jpg 1x" type="image/jpg">
+        <img src="../img/intro-photo-1.jpg" srcset="../img/intro-photo-1@2x.webp 2x" alt="">
+      </picture>
     </div>
   </div>
 </section>

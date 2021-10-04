@@ -152,8 +152,7 @@
     }
   }
 
-  &__social-item:not(:last-child) {
-    margin-inline-end: 2.5rem;
+  &__social-item {
     a {
       color: currentColor;
       
@@ -161,6 +160,10 @@
         fill: currentColor;
       }
     }
+  }
+
+  &__social-item:not(:last-child) {
+    margin-inline-end: 2.5rem;
   }
 
   &__copyright {

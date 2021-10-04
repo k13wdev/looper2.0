@@ -1,63 +1,101 @@
-.features-2 {  
+.features-2 {  /* 
   background: linear-gradient(to bottom, white 13rem, hsl(var(--clr-secondary-100)) 13rem,  hsl(var(--clr-secondary-100)) 31rem, hsl(var(--clr-secondary-300)) 31rem,  hsl(var(--clr-secondary-300)) 49rem, hsl(var(--clr-secondary-400)) 49rem,  hsl(var(--clr-secondary-400)) 100%);
   background-repeat: no-repeat;
-  background-position: right bottom;
- 
+  background-position: right bottom; */
+  
+  & > ._container-fluid {
+    padding: 0;
+  }
+  
   &__wrapper {
     position: relative;
     padding-block-start: 1rem;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(34, 1rem);
-    grid-gap: 1rem 30px;
+    
+    @media (min-width: 1366px) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 1rem 30px;
+    }
   }
 
   &__title {
-    grid-column: 1/span 6;
-    grid-row: 1/span 4;
+    padding-inline-start: 10%;
+    @media (min-width: 1366px) {
+      grid-column: 1/span 6;
+      grid-row: 1/span 4;
+    }
   }
 
   &__table {
-    grid-column: 1/span 9;
-    grid-row: 7;
+    border-collapse: collapse;
+    width: 100%;
+    @media (min-width: 1366px) {
+      grid-column: 1/span 9;
+      grid-row: 7;  
+    }
     color: hsl(var(--clr-white));
   }
 
   &__table-row {
+    padding-inline-start: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 18rem;
   }
 
+  &__table-row:nth-child(n) {
+    background-color: hsl(var(--clr-secondary-100));
+  }
+
+  &__table-row:nth-child(3n-1) {
+    background-color: hsl(var(--clr-secondary-300));
+  }
+
+  &__table-row:nth-child(3n) {
+    background-color: hsl(var(--clr-secondary-400));
+  }
+
   &__table-fields {
     max-width: 14ch;
-    width: 33.333%;
-    font-size: 1.5rem;
+    width: 30%;
+    font-size: clamp(0.9rem, 1.875vw, 1.5rem);
     font-weight: 500;
     line-height: 148%;
 
+    @media (min-width: 1366px) {
+      width: 33.333%;
+    }
   }
   
   &__table-value {
     margin: 0 auto;
     max-width: 41ch;
-    width: 44.444%;
-    font-size: 1rem;
+    width: 70%;
+    font-size: clamp(0.7rem, 1.25vw, 1rem);
     font-weight: 400;
     line-height: 163%;
+
+
+    @media (min-width: 1366px) {
+      width: 44.444%;
+    }
   }
 
   &__image {
-    position: absolute;
-    bottom: 0;
-    right: -6.15rem;
-    width: 411px;
-    height: 1146px;
-    background: hsl(var(--clr-primary));
+    display: none;
+    @media (min-width: 1366px) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 411px;
+      height: 1146px;
+      background: hsl(var(--clr-primary));
 
-    img {
-      mix-blend-mode: multiply;
+      img {
+        mix-blend-mode: multiply;
+      }
     }
-  }
+}
 }

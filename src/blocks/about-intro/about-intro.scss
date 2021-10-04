@@ -1,5 +1,6 @@
 .about-intro {
   padding-block: 6rem;
+  
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -16,7 +17,11 @@
   }
 
   &__card {
-    width: calc(50%);
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      width: 50%;
+    }
   }
 
   &__header {

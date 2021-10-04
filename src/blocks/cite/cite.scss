@@ -1,4 +1,7 @@
 .cite {
+  padding-block-end: min(6.25vw, 5rem);
+  min-height: 504px;
+
   &__wrapper {
     position: relative;
   }
