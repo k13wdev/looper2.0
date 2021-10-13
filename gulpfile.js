@@ -91,7 +91,7 @@ function server() {
 function wtch() {
     watch(["src/blocks/**/*.scss", "src/styles/**/*.scss"]).on("change", series(css, browsersync.reload))
     watch(["src/blocks/**/*.html", "src/views/**/*.html"]).on("change", series(html, browsersync.reload))
-    watch(["src/blocks/**/*.js", "src/js/**/*.js"]).on("change", series(css, browsersync.reload))
+    watch(["src/blocks/**/*.js", "src/js/**/*.js"]).on("change", series(js, browsersync.reload))
     watch("src/fonts/**/*.{woff, woff2}").on("change", series(fonts, browsersync.reload))
     watch("src/img/**/*.{jpg, png, svg, webp}").on("change", series(image, wbp, svg, browsersync.reload))
 }

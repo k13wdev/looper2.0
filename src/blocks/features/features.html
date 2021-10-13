@@ -14,23 +14,35 @@
     }'></include>
     <div class="features__slider">
       <div class="features__slider-wrapper">
-        <h3 class="features__slider-header">Mobile Apps</h3>
-        <div class="features__slider-image">
-          <picture>
-            <source srcset="../img/features-photo-1@2x.webp 2x, ../img/features-photo-1.webp 1x" type="image/webp">
-            <source srcset="../img/features-photo-1@2x.jpg 2x, ../img/features-photo-1.jpg 1x" type="image/jpg">
-            <img src="../img/features-photo-1.jpg" srcset="../img/features-photo-1@2x.jpg 2x" alt="">
-          </picture>
+        <div class="features__slide features__slide--active">
+          <h3 class="features__slider-header">Mobile Apps</h3>
+          <div class="features__slider-image">
+            <picture>
+              <source srcset="../img/features-photo-1@2x.webp 2x, ../img/features-photo-1.webp 1x" type="image/webp">
+              <source srcset="../img/features-photo-1@2x.jpg 2x, ../img/features-photo-1.jpg 1x" type="image/jpg">
+              <img src="../img/features-photo-1.jpg" srcset="../img/features-photo-1@2x.jpg 2x" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="features__slide">
+          <h3 class="features__slider-header">Mobile Apps 1</h3>
+          <div class="features__slider-image">
+            <picture>
+              <source srcset="../img/features-photo-1@2x.webp 2x, ../img/features-photo-1.webp 1x" type="image/webp">
+              <source srcset="../img/features-photo-1@2x.jpg 2x, ../img/features-photo-1.jpg 1x" type="image/jpg">
+              <img src="../img/features-photo-1.jpg" srcset="../img/features-photo-1@2x.jpg 2x" alt="">
+            </picture>
+          </div>
         </div>
       </div>
       <div class="features__slider-control">
-        <span class="features__slider-value">1</span>/<span class="features__slider-total">3</span>
-        <button class="features__slider-control-button">
+        <span class="features__slider-value" data-counter="value"></span>/<span class="features__slider-total" data-counter="total"></span>
+        <button class="features__slider-control-button" data-btn="prev">
           <svg width="27" height="27">
             <use xlink:href="#icon-arrow"></use>
           </svg>
         </button>
-        <button class="features__slider-control-button">
+        <button class="features__slider-control-button" data-btn="next">
           <svg width="27" height="27">
             <use xlink:href="#icon-arrow"></use>
           </svg>
